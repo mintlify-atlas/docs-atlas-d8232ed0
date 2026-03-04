@@ -1,0 +1,80 @@
+{
+  "projectType": "cli-tool",
+  "projectName": "Create Go App",
+  "projectDescription": "Scaffold production-ready Go projects with an interactive CLI and composable optional features.",
+  "theme": "palm",
+  "primaryColor": "#00ADD8",
+  "lightColor": "#5DC9E2",
+  "darkColor": "#007D9C",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "introduction",
+          "installation",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Core Concepts",
+        "pages": [
+          "concepts/project-structure",
+          "concepts/base-packages",
+          "concepts/feature-system"
+        ]
+      },
+      {
+        "group": "Features",
+        "pages": [
+          "features/postgres",
+          "features/docker",
+          "features/httpclient",
+          "features/ci"
+        ]
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "guides/creating-project",
+          "guides/adding-features",
+          "guides/customizing",
+          "guides/integration-patterns"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "reference/cli-commands",
+          "reference/configuration",
+          "reference/base-packages",
+          "reference/feature-api"
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Interactive CLI with TUI prompts",
+    "Base packages for logging, config, retry, workers, state, and lifecycle",
+    "Composable feature system (postgres, docker, httpclient, ci)",
+    "Automatic dependency resolution and conflict detection",
+    "Generated projects with go.mod and git initialization",
+    "Hot-reload support with Docker Compose watch",
+    "PostgreSQL with pgx, goose migrations, and sqlc",
+    "HTTP client with TLS fingerprinting"
+  ],
+  "publicApiSurface": [
+    "go run github.com/builderjarvis/create-go-app@latest [project-name]",
+    "Feature: postgres (pgx + sqlc + goose migrations)",
+    "Feature: docker (Dockerfile + compose with watch)",
+    "Feature: httpclient (TLS fingerprinting with fhttp + mimic)",
+    "Feature: ci (GitHub Actions CI)",
+    "Base package: pkg/env (typed config from environment)",
+    "Base package: pkg/log (structured logging with slog + tint)",
+    "Base package: pkg/retry (exponential backoff with jitter)",
+    "Base package: pkg/worker (bounded-concurrency worker pool)",
+    "Base package: pkg/state (file-backed JSON state with locking)",
+    "Base package: pkg/cycle (lifecycle manager for startup/shutdown)",
+    "Base package: pkg/ptr (generic pointer helpers)"
+  ]
+}
